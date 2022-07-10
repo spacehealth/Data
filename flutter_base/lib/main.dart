@@ -1,5 +1,5 @@
 import 'package:collapsible_navigation_drawer_example/provider/navigation_provider.dart';
-import 'package:collapsible_navigation_drawer_example/widget/navigation_drawer_widget.dart';
+// import 'package:collapsible_navigation_drawer_example/widget/navigation_drawer_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -37,7 +37,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
-        drawer: NavigationDrawerWidget(),
+        // drawer: NavigationDrawerWidget(),
         appBar: AppBar(
           backgroundColor: Colors.red,
           title: Text(MyApp.title),
