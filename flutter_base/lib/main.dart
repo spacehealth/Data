@@ -36,7 +36,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   List<Color> _colors = [Colors.white, Colors.red, Colors.green];
-  var _index = 0;
+  var _backgroundColor = 0;
   bool _isVisible = true;
 
   @override
@@ -47,7 +47,7 @@ class _MainPageState extends State<MainPage> {
         title: Text(MyApp.title),
         centerTitle: true,
       ),
-      backgroundColor: _colors[_index],
+      backgroundColor: _colors[_backgroundColor],
       body: Center(
           child: Visibility(
               visible: _isVisible,
@@ -69,6 +69,6 @@ class _MainPageState extends State<MainPage> {
               ))));
 
   void _startCPR() {
-    _index += 2;
+    _backgroundColor += 2;
   }
 }
