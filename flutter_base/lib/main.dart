@@ -1,4 +1,5 @@
 import 'package:collapsible_navigation_drawer_example/provider/navigation_provider.dart';
+
 // import 'package:collapsible_navigation_drawer_example/widget/navigation_drawer_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -60,9 +61,8 @@ class _MainPageState extends State<MainPage> {
                   onPressed: () {
                     setState(() {
                       _isVisible = false;
-                      _startCPR();
+                      _startCPR(); //Backend
                     });
-                    //Backend
                   },
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
