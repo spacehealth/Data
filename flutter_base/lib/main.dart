@@ -51,22 +51,27 @@ class _MainPageState extends State<MainPage> {
       body: Center(
           child: Visibility(
               visible: _isVisible,
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(200.0)),
-                  minimumSize: Size(300, 300),
-                ),
-                label: Text("Start CPR", style: TextStyle(fontSize: 50)),
-                icon: Icon(Icons.emergency_outlined, size: 50),
-                onPressed: () {
-                  setState(() {
-                    _isVisible = false;
-                    _startCPR();
-                  });
-                  //Backend
-                },
-              ))));
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(200.0)),
+                    minimumSize: Size(300, 300),
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _isVisible = false;
+                      _startCPR();
+                    });
+                    //Backend
+                  },
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text("Start CPR", style: TextStyle(fontSize: 50)),
+                        Icon(Icons.emergency_outlined, size: 50),
+                      ])))));
 
   void _startCPR() {
     _backgroundColor += 2;
